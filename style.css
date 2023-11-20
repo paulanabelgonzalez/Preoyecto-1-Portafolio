@@ -11,6 +11,7 @@
 body {
     padding: 0px 12px;
     max-width: 1200px;
+    margin: auto;
 }
 
 /* comienzo estilos header */
@@ -70,7 +71,7 @@ a {
 /* fin estilos header */
 
 /* comienzo estilos main */
-/* estilos primer sección */
+/* estilos sección hola*/
 
 .hola,
 .conocimientos,
@@ -124,9 +125,9 @@ img {
     padding-top: 33px;
 }
 
-/* fin estilos primer sección */
+/* fin estilos sección hola */
 
-/* estilos segunda sección */
+/* estilos sección conocimientos*/
 
 h2 {
     font-family: "Merienda";
@@ -154,7 +155,7 @@ h2 {
     border-radius: 7px;
 }
 
-.item--img {
+.item_img {
     width: 100px;
 }
 
@@ -163,15 +164,15 @@ h2 {
     padding-top: 4px;
 }
 
-.item--nombre {
+.item_nombre {
     font-size: 1.3rem;
     font-family: "Edu TAS Beginner";
     font-weight: bold;
 }
 
-/* fin estilos segunda sección */
+/* fin estilos sección conocimientos */
 
-/* estilos tercer sección */
+/* estilos sección frase*/
 
 .frase {
     width: calc(100% + 24px);
@@ -202,9 +203,9 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* fin estilos tercer sección */
+/* fin estilos sección frase */
 
-/* estilos cuarta sección */
+/* estilos sección proyectos */
 
 .caja-proyectos-items {
     display: flex;
@@ -213,7 +214,7 @@ h2 {
     gap: 20px;
 }
 
-.proyectos--descripcion--negrita {
+.proyectos--descripcion_negrita {
     font-weight: 600;
 }
 
@@ -233,19 +234,19 @@ span {
     border-radius: 9px;
 }
 
-.proyecto--item .item--img {
+.proyecto--item .item_img {
     width: 75%;
     height: 200px;
     padding: 10px;
 }
 
-.proyecto--item .item--nombre {
+.proyecto--item .item_nombre {
     padding-top: 10px;
 }
 
-/* fin estilos cuarta sección */
+/* fin estilos sección proyectos*/
 
-/* estilos quinta sección */
+/* estilos sección contacto */
 
 .contactame_span {
     display: inline-block;
@@ -271,7 +272,7 @@ span {
     display: inline-block;
 }
 
-.caja-contacto-escribime {
+.formulario-contacto-escribime {
     text-align: left;
     padding: 0px 10px 30px;
 }
@@ -288,7 +289,7 @@ label {
     display: inline-block;
 }
 
-.caja-contacto-escribime span img {
+.formulario-contacto-escribime span img {
     width: 2%;
     padding-bottom: 4px;
 }
@@ -315,7 +316,7 @@ textarea {
     border-radius: 28px;
 }
 
-/* fin estilos quinta sección */
+/* fin estilos sección contacto*/
 
 /* comienzo estilos footer */
 
@@ -324,7 +325,7 @@ footer {
     margin-left: -12px;
     height: 250px;
     background-color: beige;
-    padding: 80px 20px 60px;
+    padding: 55px 20px 30px;
 }
 
 .footer-nav {
@@ -368,3 +369,5 @@ footer {
     font-size: 1.2rem;
     margin-left: 3px;
 }
+
+/* fin estilos footer */
