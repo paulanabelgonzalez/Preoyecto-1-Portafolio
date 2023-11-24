@@ -23,6 +23,9 @@ body {
 header {
     display: none;
     font-family: "Agbalumo";
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #A8D2Bf, rgb(193 189 189), #E9BAD9);
 }
 
 @media (min-width: 970px) {
@@ -69,8 +72,18 @@ nav ul {
     }
 }
 
+nav a {
+    color: mintcream;
+}
+
 a {
     text-decoration: none;
+}
+
+.nav-contacto {
+    border: 2px solid;
+    padding: 8px 30px 10px 30px;
+    border-radius: 37px;
 }
 
 /* fin estilos header */
@@ -78,6 +91,9 @@ a {
 /* comienzo estilos main */
 
 /* estilos sección hola*/
+section {
+    scroll-margin-top: 90px;
+}
 
 .hola,
 .conocimientos,
@@ -85,20 +101,30 @@ a {
 .proyectos,
 .contacto,
 footer {
-    padding: 60px 0px;
+    padding-block: 80px;
     font-family: "Amita";
     text-align: center;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-}
+    align-items: center; */
 
+}
 
 @media (min-width: 970px) {
     .caja-hola {
+        height: 635px;
         display: flex;
         align-items: center;
-        max-width: 1200px;
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 970px) {
+
+    .caja-hola-informacion,
+    .caja-hola-imagen {
+        width: 50%;
     }
 }
 
@@ -135,12 +161,16 @@ h1 {
     font-family: "Edu TAS Beginner";
 }
 
-img {
+.hola--img {
     width: 100%;
+    padding-top: 33px;
 }
 
-.hola--img {
-    padding-top: 33px;
+@media (min-width: 970px) {
+
+    .hola--img {
+        padding-top: 0;
+    }
 }
 
 /* fin estilos sección hola */
@@ -150,7 +180,7 @@ img {
 h2 {
     font-family: "Merienda";
     font-size: 2.4rem;
-    padding-bottom: 20px;
+    padding-block: 34px;
 }
 
 .conocimientos--descripcion {
@@ -164,12 +194,13 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 13px;
     max-width: 1100px;
+    margin: auto;
     padding-bottom: 58px
 }
 
 .conocimiento--item {
-    margin: 5px;
     padding: 12px 30px;
     border: 0.5px solid;
     border-radius: 7px;
@@ -208,17 +239,28 @@ h2 {
 .frase {
     width: calc(100% + 24px);
     margin-left: -12px;
-    background-color: beige;
+    background: url(img/fondos/magico.webp);
+    background-size: cover;
+    background-position: -153px 90px;
     padding: 50px 0px;
-    margin-bottom: 65px
+}
+
+@media (min-width:970px) {
+    .frase {
+        width: 100%;
+        margin-left: 0px;
+        background-position: center;
+    }
 }
 
 .caja-frase {
     max-width: 600px;
+    margin: auto;
     height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    color: white;
 }
 
 .fa-solid {
@@ -229,6 +271,7 @@ h2 {
 .frase--motivacional {
     font-weight: 600;
     padding-bottom: 28px;
+    color: white;
 }
 
 .frase--autor {
@@ -242,11 +285,13 @@ h2 {
 .caja-proyectos-informacion {
     width: 100%;
     max-width: 1100px;
+    margin: auto;
 }
 
 .caja-proyectos-items {
     display: flex;
     flex-wrap: wrap;
+    gap: 13px;
 }
 
 .proyectos--descripcion_negrita {
@@ -267,7 +312,6 @@ span {
 .proyecto--item {
     width: 100%;
     height: 290px;
-    margin: 10px;
     border: 1px solid;
     border-radius: 9px;
 }
@@ -292,11 +336,18 @@ span {
 
 /* estilos sección contacto */
 
+.contacto {
+    background: url(img/fondos/marmol\ rosa.webp);
+    background-size: cover;
+    padding-block: 99px;
+}
+
 @media (min-width: 970px) {
     .caja-contacto {
         width: 100%;
         text-align: left;
         max-width: 1100px;
+        margin: auto;
         display: flex;
     }
 }
@@ -305,7 +356,7 @@ span {
 
     .caja-contacto-contactame,
     .formulario-contacto-escribime {
-        width: calc(100% / 2 - (5px * 2));
+        width: 50%;
     }
 }
 
@@ -347,6 +398,14 @@ span {
     text-align: center;
 }
 
+@media (min-width: 970px) {
+    .escribime--datos {
+        display: flex;
+        gap: 6px;
+    }
+}
+
+
 label {
     width: 100%;
     font-family: "Edu TAS Beginner";
@@ -356,7 +415,7 @@ label {
 }
 
 .formulario-contacto-escribime span img {
-    width: 2%;
+    width: 8px;
     padding-bottom: 4px;
 }
 
@@ -387,12 +446,18 @@ textarea {
 /* comienzo estilos footer */
 
 footer {
-    width: calc(100% + 24px);
-    margin-left: -12px;
+
     height: 250px;
-    background-color: beige;
+    background: url(img/fondos/fondo-footer.gif);
     padding: 55px 20px 30px;
     flex-direction: column;
+}
+
+@media (min-width: 970px) {
+    footer {
+        width: 100%;
+        margin-left: 0px;
+    }
 }
 
 .footer-nav {
@@ -408,8 +473,9 @@ footer {
 .footer-nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
-
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 25px;
 }
 
 .footer-redes {

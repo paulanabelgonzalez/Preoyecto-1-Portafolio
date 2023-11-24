@@ -21,7 +21,7 @@
                 <li><a href="#hola">Hola</a></li>
                 <li><a href="#conocimientos">Conocimientos</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contactame</a></li>
+                <li><a href="#contacto" class="nav-contacto">Contactame</a></li>
 
             </ul>
             <!-- fin de la lista nav-->
@@ -33,8 +33,10 @@
     <!-- comienzo del main -->
     <main>
         <!-- comienzo sección hola-->
-        <section class="hola"><a name="hola"></a>
-
+        <section class="hola" id="hola">
+            <!-- <video muted autoplay loop id="video_background" preload="auto" volume="50">
+                <source src="img/fondos/Download.mp4" type="video/mp4">
+            </video> -->
             <div class="caja-hola">
 
                 <div class="caja-hola-informacion">
@@ -60,7 +62,7 @@
         <!-- fin sección hola -->
 
         <!-- comienzo sección conocimientos-->
-        <section class="conocimientos"><a name="conocimientos"></a>
+        <section class="conocimientos" id="conocimientos">
 
             <div class="caja-conocimiento">
 
@@ -118,7 +120,7 @@
         <section class="frase">
 
             <div class="caja-frase">
-                <i class="fa-solid fa-quote-right" style="color: #511f35;">
+                <i class="fa-solid fa-quote-right">
                 </i>
                 <p class="frase--motivacional">
                     El verdadero signo de la inteligencia no es el conocimiento, sino la imaginación.
@@ -130,7 +132,7 @@
         <!-- fin sección frase-->
 
         <!-- comienzo sección proyectos-->
-        <section class="proyectos"><a name="proyectos"></a>
+        <section class="proyectos" id="proyectos">
 
             <div class="caja-proyectos-informacion">
                 <h2 class="proyectos--titulo">
@@ -190,7 +192,7 @@
         <!-- fin sección proyectos-->
 
         <!-- comienzo sección contacto -->
-        <section class="contacto"><a name="contacto"></a>
+        <section class="contacto" id="contacto">
 
             <div class="caja-contacto">
 
@@ -266,7 +268,7 @@
                         <label for="mensaje">Mensaje <span><img src="img/formulario/Asterisco.svg"
                                     alt="imagen de asterisco"></span></label>
                         <textarea placeholder="Escribí tu mensaje aquí" name="mensaje" class="formulario" id="mensaje"
-                            requerid></textarea>
+                            required></textarea>
                     </div>
                     <button class="escribime--btn">
                         Enviar
