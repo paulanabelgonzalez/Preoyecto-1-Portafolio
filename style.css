@@ -26,6 +26,7 @@ header {
     position: sticky;
     top: 0;
     background: linear-gradient(to right, #A8D2Bf, rgb(193 189 189), #E9BAD9);
+    z-index: 1;
 }
 
 @media (min-width: 970px) {
@@ -48,6 +49,8 @@ nav {
         max-width: 1200px;
     }
 }
+
+/* animación en el header */
 
 nav ul {
     display: flex;
@@ -72,18 +75,33 @@ nav ul {
     }
 }
 
+/* fin animación en el header */
+
 nav a {
     color: mintcream;
 }
 
+nav a:hover {
+    text-shadow: 0 0 18px #eee;
+    color: #d0ffe9;
+}
+
 a {
     text-decoration: none;
+    color: pink;
 }
 
 .nav-contacto {
     border: 2px solid;
     padding: 8px 30px 10px 30px;
     border-radius: 37px;
+    box-shadow: inset 0 0 0 0 #caffe6;
+    transition: ease-out 0.4s;
+}
+
+.nav-contacto:hover {
+    color: #fff;
+    box-shadow: inset 0 0 0 50px #a9d1bf;
 }
 
 /* fin estilos header */
@@ -139,11 +157,38 @@ p {
     line-height: 1.8rem;
 }
 
+/* color gradiente para h1 */
+
 h1 {
     font-size: 2.7rem;
     padding-bottom: 13px;
-    font-family: "Merienda";
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
 }
+
+h1:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #a9d1bf, #ffc9ed);
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* fin color gradiente */
+
+@media (min-width: 970px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
 
 .hola--descripcion,
 .conocimientos--descripcion,
@@ -155,10 +200,18 @@ h1 {
 
     font-size: 1.5rem;
     font-weight: 600;
-    border: 1px solid;
-    border-radius: 33px;
-    padding: 15px 40px;
+    border-radius: 40px;
+    padding: 15px 70px;
     font-family: "Edu TAS Beginner";
+    background-image: linear-gradient(to right, #accebe 0%, #e7bad7 51%, #accebe 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+}
+
+.hola--btn:hover {
+    background-position: right center;
+    color: #f7dfdf;
 }
 
 .hola--img {
@@ -167,7 +220,6 @@ h1 {
 }
 
 @media (min-width: 970px) {
-
     .hola--img {
         padding-top: 0;
     }
@@ -181,6 +233,8 @@ h2 {
     font-family: "Merienda";
     font-size: 2.4rem;
     padding-block: 34px;
+    /* color: pink;
+        text-shadow: 0px 0px 7px black;*/
 }
 
 .conocimientos--descripcion {
@@ -202,8 +256,10 @@ h2 {
 
 .conocimiento--item {
     padding: 12px 30px;
-    border: 0.5px solid;
     border-radius: 7px;
+    background: rgb(236, 241, 241);
+    position: relative;
+    overflow: hidden;
 }
 
 @media (min-width: 970px) {
@@ -216,6 +272,63 @@ h2 {
         align-items: center;
     }
 }
+
+/* animación de la caja conocimientos */
+
+.conocimiento--item span {
+    position: absolute;
+    transition: .5s;
+}
+
+.conocimiento--item span:nth-child(1) {
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: -100%;
+    background: linear-gradient(to right, #a9d1bf, #ffc9ed);
+}
+
+.conocimiento--item span:nth-child(2) {
+    width: 5px;
+    height: 100%;
+    bottom: -100%;
+    right: 0;
+    background: #ffc9ed;
+}
+
+.conocimiento--item span:nth-child(3) {
+    width: 100%;
+    height: 5px;
+    top: 0;
+    right: -100%;
+    background: linear-gradient(to right, #a9d1bf, #ffc9ed);
+}
+
+.conocimiento--item span:nth-child(4) {
+    width: 5px;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: #a9d1bf;
+}
+
+.conocimiento--item:hover span:nth-child(1) {
+    left: 0;
+}
+
+.conocimiento--item:hover span:nth-child(2) {
+    bottom: 0;
+}
+
+.conocimiento--item:hover span:nth-child(3) {
+    right: 0;
+}
+
+.conocimiento--item:hover span:nth-child(4) {
+    top: 0;
+}
+
+/* fin animación de la caja conocientos */
 
 .item_img {
     width: 100px;
@@ -291,7 +404,7 @@ h2 {
 .caja-proyectos-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 13px;
+    gap: 30px;
 }
 
 .proyectos--descripcion_negrita {
@@ -304,7 +417,7 @@ h2 {
     margin: auto;
 }
 
-span {
+.proyectos_span {
     font-family: "Merienda";
     font-weight: 600;
 }
@@ -312,8 +425,80 @@ span {
 .proyecto--item {
     width: 100%;
     height: 290px;
-    border: 1px solid;
+    background: #eee;
     border-radius: 9px;
+    position: relative;
+}
+
+/* sombra degrade */
+
+.item_hover {
+    width: 100%;
+    height: 290px;
+    background: linear-gradient(to right, #a9d1bf, #ffc9ed);
+    border-radius: 9px;
+    position: absolute;
+    filter: blur(15px);
+    display: none;
+}
+
+.proyecto--item:hover .item_hover {
+    display: block;
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+/* .proyecto--item::before {
+    content: "";
+    background: linear-gradient(to bottom, #a9d1bf, #ffc9ed);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: scale(1.1);
+    filter: blur(15px);
+    display: none;
+}
+
+.proyecto--item:hover ::before {
+    display: block;
+} */
+
+/* fin sombra degrade */
+
+.proyecto--item span {
+    position: absolute;
+}
+
+.proyecto--item span:nth-child(2) {
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #a9d1bf, #ffc9ed);
+}
+
+.proyecto--item span:nth-child(3) {
+    width: 5px;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    background: #ffc9ed;
+}
+
+.proyecto--item span:nth-child(4) {
+    width: 100%;
+    height: 5px;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, #a9d1bf, #ffc9ed);
+}
+
+.proyecto--item span:nth-child(5) {
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #a9d1bf;
 }
 
 @media (min-width: 970px) {
@@ -330,6 +515,7 @@ span {
 
 .proyecto--item .item_nombre {
     padding-top: 10px;
+    color: cadetblue;
 }
 
 /* fin estilos sección proyectos*/
@@ -373,15 +559,102 @@ span {
 .contactame--redes {
     padding-left: 63px;
     padding-bottom: 50px;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .contactame--redes a {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-family: "Edu TAS Beginner";
     display: flex;
+    align-items: center;
     gap: 25px;
-    padding-bottom: 19px
+    padding-bottom: 19px;
+    color: #000;
 }
+
+.redes .redes_icono {
+    display: inline-block;
+    width: 56px;
+    border: 3px solid transparent;
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.redes:hover .redes_icono {
+    border: 3px solid white;
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.redes:hover {
+    color: pink;
+    text-shadow: 0px 0px 7px black;
+}
+
+.redes_instagram .redes_icono {
+    background: url(img/redes/redes/instagram.svg)center center no-repeat;
+    background-size: 30px;
+}
+
+.redes_instagram:hover .redes_icono {
+    background: url(img/redes/redes-hover/instagram-hover.svg)center center no-repeat;
+    background-size: 30px;
+    background-color: pink;
+}
+
+.redes_github .redes_icono {
+    background: url(img/redes/redes/github.svg)center center no-repeat;
+    background-size: 30px;
+}
+
+.redes_github:hover .redes_icono {
+    background: url(img/redes/redes-hover/github-hover.svg)center center no-repeat;
+    background-size: 30px;
+    background-color: pink;
+}
+
+.redes_linkedin .redes_icono {
+    background: url(img/redes/redes/linkedin.svg)center center no-repeat;
+    background-size: 30px;
+}
+
+.redes_linkedin:hover .redes_icono {
+    background: url(img/redes/redes-hover/linkedin-hover.svg)center center no-repeat;
+    background-size: 30px;
+    background-color: pink;
+}
+
+.redes_mail .redes_icono {
+    background: url(img/redes/redes/mail.svg)center center no-repeat;
+    background-size: 30px;
+}
+
+.redes_mail:hover .redes_icono {
+    background: url(img/redes/redes-hover/mail-hover.svg)center center no-repeat;
+    background-size: 30px;
+    background-color: pink;
+}
+
+/* .redes_github .redes_icono {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url(img/redes/redes/in.svg)center center no-repeat;
+    background-size: 25px;
+}
+
+.redes_github:hover .redes_icono {
+    background: url(img/redes/github-hover.svg)center center no-repeat;
+    background-size: 25px;
+    border: 1px solid;
+    padding: 21px;
+    border-radius: 50%;
+}
+
+.redes_github:hover {
+    color: brown;
+} */
 
 .contactame--redes span img {
     width: 25px;
@@ -405,6 +678,12 @@ span {
     }
 }
 
+.datos_nombre,
+.datos_apellido,
+.escribime--mail,
+.escribime--mensaje {
+    position: relative;
+}
 
 label {
     width: 100%;
@@ -426,10 +705,66 @@ textarea {
     border-radius: 24px;
     font-family: "Amita";
     margin-bottom: 20px;
+    outline: 0;
+    border: 1px solid transparent;
 }
 
 textarea {
     height: 200px;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0px 0px 7px #000;
+    /* outline: 0; */
+}
+
+input:valid:focus,
+textarea:valid:focus {
+    box-shadow: 0px 0px 5px #88c459;
+}
+
+input:invalid:not(:placeholder-shown):focus,
+textarea:invalid:not(:placeholder-shown):focus {
+    box-shadow: 0px 0px 5px #f5414f;
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border: 1px solid #f5414f;
+}
+
+input:valid,
+textarea:valid {
+    border: 1px solid #88c459;
+}
+
+.icon-invalid,
+.icon-valid {
+    display: none;
+    position: absolute;
+    bottom: 31px;
+    right: 20px;
+    /* transform: translateY(50%); */
+}
+
+textarea.icon-invalid.icon-valid {
+    bottom: 202px;
+}
+
+.icon-valid {
+    color: #88c459;
+}
+
+.icon-invalid {
+    color: #f5414f;
+}
+
+input:valid~.icon-valid,
+textarea:valid~.icon-valid,
+input:not(:placeholder-shown):invalid~.icon-invalid,
+textarea:not(:placeholder-shown):invalid~.icon-invalid {
+    display: block;
 }
 
 .escribime--btn {
@@ -486,15 +821,62 @@ footer {
     padding-bottom: 30px;
 }
 
-.footer-redes a {
-    border: 1px solid;
+.footer-redes--sociales .footer-redes--icono {
+    display: inline-block;
+    width: 56px;
+    border: 3px solid white;
+    padding: 25px;
     border-radius: 50%;
-    padding: 15px;
-    display: flex;
 }
 
-.footer-redes img {
-    width: 25px;
+.footer-redes--sociales:hover .footer-redes--icono {
+    border: 3px solid white;
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.redes--instagram .footer-redes--icono {
+    background: url(img/footer/redes/instagram-footer.svg)center center no-repeat;
+    background-size: 30px;
+    background-color: white;
+}
+
+.redes--instagram:hover .footer-redes--icono {
+    background: url(img/redes/redes-hover/instagram-hover.svg)center center no-repeat;
+    background-size: 30px;
+}
+
+.redes--github .footer-redes--icono {
+    background: url(img/footer/redes/github-footer.svg)center center no-repeat;
+    background-size: 30px;
+    background-color: white;
+}
+
+.redes--github:hover .footer-redes--icono {
+    background: url(img/redes/redes-hover/github-hover.svg)center center no-repeat;
+    background-size: 30px;
+}
+
+.redes--linkedin .footer-redes--icono {
+    background: url(img/footer/redes/linkedin-footer.svg)center center no-repeat;
+    background-size: 30px;
+    background-color: white;
+}
+
+.redes--linkedin:hover .footer-redes--icono {
+    background: url(img/redes/redes-hover/linkedin-hover.svg)center center no-repeat;
+    background-size: 30px;
+}
+
+.redes--mail .footer-redes--icono {
+    background: url(img/footer/redes/mail-footer.svg)center center no-repeat;
+    background-size: 30px;
+    background-color: white;
+}
+
+.redes--mail:hover .footer-redes--icono {
+    background: url(img/redes/redes-hover/mail-hover.svg)center center no-repeat;
+    background-size: 30px;
 }
 
 .footer--span {
@@ -504,3 +886,5 @@ footer {
 }
 
 /* fin estilos footer */
+
+/* poner el tabindex, favicon */
