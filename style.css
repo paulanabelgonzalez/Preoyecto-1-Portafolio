@@ -361,6 +361,7 @@ h2 {
 @media (min-width:970px) {
     .frase {
         width: 100%;
+        height: 700px;
         margin-left: 0px;
         background-position: center;
     }
@@ -374,6 +375,7 @@ h2 {
     flex-direction: column;
     justify-content: flex-start;
     color: white;
+    text-shadow: 0 0 7px black;
 }
 
 .fa-solid {
@@ -425,7 +427,7 @@ h2 {
 .proyecto--item {
     width: 100%;
     height: 290px;
-    background: #eee;
+    background: #fffafa;
     border-radius: 9px;
     position: relative;
 }
@@ -515,7 +517,7 @@ h2 {
 
 .proyecto--item .item_nombre {
     padding-top: 10px;
-    color: cadetblue;
+    color: #558d8e;
 }
 
 /* fin estilos sección proyectos*/
@@ -523,14 +525,28 @@ h2 {
 /* estilos sección contacto */
 
 .contacto {
+    width: calc(100% + 24px);
+    margin-left: -12px;
     background: url(img/fondos/marmol\ rosa.webp);
     background-size: cover;
     padding-block: 99px;
 }
 
 @media (min-width: 970px) {
+    .contacto {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 970px) {
     .caja-contacto {
         width: 100%;
+        background-color: #f0dadf;
+        background-size: cover;
+        box-shadow: 0px 0px 7px black;
+        border-radius: 17px;
+        padding: 17px;
         text-align: left;
         max-width: 1100px;
         margin: auto;
@@ -546,8 +562,14 @@ h2 {
     }
 }
 
+.contactame--titulo,
+.escribime--titulo {
+    text-shadow: 0px 0px 7px #a10b25;
+}
+
 .contactame--descripcion {
     max-width: 460px;
+    padding-inline: 9px;
 }
 
 .contactame_span {
@@ -557,7 +579,6 @@ h2 {
 }
 
 .contactame--redes {
-    padding-left: 63px;
     padding-bottom: 50px;
     display: inline-flex;
     flex-direction: column;
@@ -588,8 +609,8 @@ h2 {
 }
 
 .redes:hover {
-    color: pink;
-    text-shadow: 0px 0px 7px black;
+    color: black;
+    text-shadow: 0px 0px 7px #a10b25;
 }
 
 .redes_instagram .redes_icono {
@@ -672,6 +693,12 @@ h2 {
 }
 
 @media (min-width: 970px) {
+    .escribime--titulo {
+        text-align: left;
+    }
+}
+
+@media (min-width: 970px) {
     .escribime--datos {
         display: flex;
         gap: 6px;
@@ -716,7 +743,6 @@ textarea {
 input:focus,
 textarea:focus {
     box-shadow: 0px 0px 7px #000;
-    /* outline: 0; */
 }
 
 input:valid:focus,
@@ -748,8 +774,11 @@ textarea:valid {
     /* transform: translateY(50%); */
 }
 
-textarea.icon-invalid.icon-valid {
-    bottom: 202px;
+.textarea-invalid,
+.textarea-valid {
+    bottom: 45px;
+    right: 15px;
+    position: absolute;
 }
 
 .icon-valid {
@@ -767,13 +796,11 @@ textarea:not(:placeholder-shown):invalid~.icon-invalid {
     display: block;
 }
 
-.escribime--btn {
+.escribime--btn input {
     width: 130px;
-    font-family: "Edu TAS Beginner";
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 13px 20px;
-    border-radius: 28px;
+    border: 1px solid white;
+    background-color: #88c2a8;
+    color: white;
 }
 
 /* fin estilos sección contacto*/
@@ -781,7 +808,8 @@ textarea:not(:placeholder-shown):invalid~.icon-invalid {
 /* comienzo estilos footer */
 
 footer {
-
+    width: calc(100% + 24px);
+    margin-left: -12px;
     height: 250px;
     background: url(img/fondos/fondo-footer.gif);
     padding: 55px 20px 30px;
@@ -877,6 +905,10 @@ footer {
 .redes--mail:hover .footer-redes--icono {
     background: url(img/redes/redes-hover/mail-hover.svg)center center no-repeat;
     background-size: 30px;
+}
+
+.footer-texto {
+    color: rgb(148 142 142);
 }
 
 .footer--span {

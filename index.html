@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" preload="">
-    <!-- <link rel="stylesheet"
-        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" preload=""> -->
     <script src="https://kit.fontawesome.com/87f4244a2b.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <title>Portafolio</title>
+    <title>Paula Gonzalez</title>
 </head>
 
 <body>
@@ -20,10 +19,10 @@
             <!-- comienzo de la lista nav -->
             <ul>
 
-                <li><a href="#hola">Hola</a></li>
-                <li><a href="#conocimientos">Conocimientos</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto" class="nav-contacto">Contactame</a></li>
+                <li><a href="#hola" tabindex="0">Hola</a></li>
+                <li><a href="#conocimientos" tabindex="1">Conocimientos</a></li>
+                <li><a href="#proyectos" tabindex="2">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-contacto" tabindex="3">Contactame</a></li>
 
             </ul>
             <!-- fin de la lista nav-->
@@ -51,7 +50,7 @@
                     <p class="hola--descripcion">
                         Desarroladora, fan de las manualidades y de las matemáticas.
                     </p>
-                    <a href="#proyectos" class="hola--btn">Mis trabajos</a>
+                    <a href="#proyectos" class="hola--btn" tabindex="4">Mis trabajos</a>
                 </div>
 
                 <div class="caja-hola-imagen">
@@ -173,17 +172,17 @@
                 </p>
                 <!-- cards proyectos -->
                 <div class="caja-proyectos-items">
-                    <a href="#" class="proyecto--item">
+                    <a href="#" class="proyecto--item" tabindex="5">
                         <span class="item_hover"></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         <img src="" alt="" class="item_img">
-                        <h3 class="item_nombre">Portafolio</h3>
+                        <h3 class="item_nombre">Portfolio</h3>
                     </a>
 
-                    <a href="#" class="proyecto--item">
+                    <a href="#" class="proyecto--item" tabindex="6">
                         <span class="item_hover"></span>
                         <span></span>
                         <span></span>
@@ -194,7 +193,7 @@
                         <h3 class="item_nombre">Generador de memes</h3>
                     </a>
 
-                    <a href="#" class="proyecto--item">
+                    <a href="#" class="proyecto--item" tabindex="7">
                         <span class="item_hover"></span>
                         <span></span>
                         <span></span>
@@ -204,7 +203,7 @@
                         <h3 class="item_nombre">Match 3</h3>
                     </a>
 
-                    <a href="#" class="proyecto--item">
+                    <a href="#" class="proyecto--item" tabindex="8">
                         <span class="item_hover"></span>
                         <span></span>
                         <span></span>
@@ -215,7 +214,7 @@
                         <h3 class="item_nombre">Controlador de gastos</h3>
                     </a>
 
-                    <a href="#" class="proyecto--item">
+                    <a href="#" class="proyecto--item" tabindex="9">
                         <span class="item_hover"></span>
                         <span></span>
                         <span></span>
@@ -226,7 +225,7 @@
                         <h3 class="item_nombre">Administrador de reuniones</h3>
                     </a>
 
-                    <a href="#" class="proyecto--item">
+                    <a href="#" class="proyecto--item" tabindex="10">
                         <span class="item_hover"></span>
                         <span></span>
                         <span></span>
@@ -236,7 +235,7 @@
                         <h3 class="item_nombre">Todo app</h3>
                     </a>
 
-                    <a href="#" class="proyecto--item">
+                    <a href="#" class="proyecto--item" tabindex="11">
                         <span class="item_hover"></span>
                         <span></span>
                         <span></span>
@@ -245,6 +244,16 @@
                         <img src="img/proyectos/buscador-de-peliculas.svg" alt="hombre-viendo-una-pelicula"
                             class="item_img">
                         <h3 class="item_nombre">Buscador de películas</h3>
+                    </a>
+
+                    <a href="#" class="proyecto--item" tabindex="12">
+                        <span class="item_hover"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <img src="" alt="rick and morty personajes de una serie" class="item_img">
+                        <h3 class="item_nombre">Proyecto final de introducción a fron-end</h3>
                     </a>
                 </div>
                 <!--  fin cards proyectos -->
@@ -255,6 +264,8 @@
 
         <!-- comienzo sección contacto -->
         <section class="contacto" id="contacto">
+
+
 
             <div class="caja-contacto">
 
@@ -268,21 +279,21 @@
                         </p>
                         <!-- comienzo enlaces a redes sociales -->
                         <div class="contactame--redes">
-                            <a href="https://instagram.com" class="redes redes_instagram">
+                            <a href="https://instagram.com" class="redes redes_instagram" tabindex="13">
                                 <span class="redes_icono"></span>
                                 <span>@PaulaGonzalez</span>
                             </a>
-                            <a href="https://github.com" class="redes redes_github">
+                            <a href="https://github.com" class="redes redes_github" tabindex="14">
                                 <span class="redes_icono"></span>
                                 <span>paulanabelgonzalez</span>
 
                             </a>
-                            <a href="https://linkedin.com" class="redes redes_linkedin">
+                            <a href="https://linkedin.com" class="redes redes_linkedin" tabindex="15">
                                 <span class="redes_icono"></span>
                                 <span>paulagonzalez</span>
 
                             </a>
-                            <a href="mailto:gaby_pau@live.com.ar" class="redes redes_mail">
+                            <a href="mailto:gaby_pau@live.com.ar" class="redes redes_mail" tabindex="16">
                                 <span class="redes_icono"></span>
                                 <span>gaby_pau@live.com.ar</span>
 
@@ -294,15 +305,15 @@
                 </div>
 
                 <!-- comienzo formulario -->
-                <form action="gracias.html" class="formulario-contacto-escribime">
+                <form action="" class="formulario-contacto-escribime">
                     <h2 class="escribime--titulo">Escribime</h2>
                     <div class="escribime--datos">
 
                         <div class="datos_nombre">
-                            <label for="nombre">Nombre <span><img src="img/formulario/Asterisco.svg"
+                            <label for="nombre">Nombre<span><img src="img/formulario/Asterisco.svg"
                                         alt="imagen de asterisco"></span></label>
                             <input type="text" placeholder="Ingresá tu nombre" name="nombre" class="formulario"
-                                id="nombre" required />
+                                id="nombre" required tabindex="17" />
                             <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
                             <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
                         </div>
@@ -311,7 +322,7 @@
                             <label for="apellido">Apellido <span><img src="img/formulario/Asterisco.svg"
                                         alt="imagen de asterisco"></span></label>
                             <input type="text" placeholder="Ingresá tu apellido" name="apellido" class="formulario"
-                                id="apellido" required>
+                                id="apellido" required tabindex="18" />
                             <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
                             <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
                         </div>
@@ -322,7 +333,7 @@
                         <label for="email">Email <span><img src="img/formulario/Asterisco.svg"
                                     alt="imagen de asterisco"></span></label>
                         <input type="email" placeholder="Ingresá tu e-mail" name="email" class="formulario" id="email"
-                            required>
+                            required tabindex="19" />
                         <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
                         <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
                     </div>
@@ -331,13 +342,13 @@
                         <label for="mensaje">Mensaje <span><img src="img/formulario/Asterisco.svg"
                                     alt="imagen de asterisco"></span></label>
                         <textarea placeholder="Escribí tu mensaje aquí" name="mensaje" class="formulario" id="mensaje"
-                            required></textarea>
-                        <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
-                        <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
+                            required tabindex="20"></textarea>
+                        <i class="far fa-times-circle icon-invalid textarea-invalid" aria-hidden="true"></i>
+                        <i class="far fa-check-circle icon-valid textarea-valid" aria-hidden="true"></i>
                     </div>
-                    <button class="escribime--btn">
-                        Enviar
-                    </button>
+                    <div class="escribime--btn" tabindex="21">
+                        <input type="submit" value="Enviar">
+                    </div>
 
                 </form>
                 <!-- fin formulario -->
@@ -353,25 +364,25 @@
         <!-- comienzo lista de nav -->
         <div class="footer-nav">
             <ul>
-                <li><a href="#hola">Hola</a></li>
-                <li><a href="#conocimientos">Conocimientos</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contactame</a></li>
+                <li><a href="#hola" tabindex="22">Hola</a></li>
+                <li><a href="#conocimientos" tabindex="23">Conocimientos</a></li>
+                <li><a href="#proyectos" tabindex="24">Proyectos</a></li>
+                <li><a href="#contacto" tabindex="25">Contactame</a></li>
             </ul>
         </div>
         <!-- fin lista de nav -->
         <div class="footer-redes">
             <a href="https://instagram.com" class="footer-redes--sociales redes--instagram">
-                <span class="footer-redes--icono"></span>
+                <span class="footer-redes--icono" tabindex="26"></span>
             </a>
             <a href="https://github.com" class="footer-redes--sociales redes--github">
-                <span class="footer-redes--icono"></span>
+                <span class="footer-redes--icono" tabindex="27"></span>
             </a>
             <a href="https://www.linkedin.com" class="footer-redes--sociales redes--linkedin">
-                <span class="footer-redes--icono"></span>
+                <span class="footer-redes--icono" tabindex="28"></span>
             </a>
             <a href="mailto:gaby_pau@live.com.ar" class="footer-redes--sociales redes--mail">
-                <span class="footer-redes--icono"></span>
+                <span class="footer-redes--icono" tabindex="29"></span>
             </a>
         </div>
         <!-- fin enlaces redes sociales -->
