@@ -14,20 +14,34 @@
 <body>
     <!-- comienzo del header -->
     <header>
-        <!-- comienzo del nav -->
-        <nav>
-            <!-- comienzo de la lista nav -->
-            <ul>
-
-                <li><a href="#hola" tabindex="0">Hola</a></li>
-                <li><a href="#conocimientos" tabindex="1">Conocimientos</a></li>
-                <li><a href="#proyectos" tabindex="2">Proyectos</a></li>
-                <li><a href="#contacto" class="nav-contacto" tabindex="3">Contactame</a></li>
-
-            </ul>
-            <!-- fin de la lista nav-->
+        <!-- comienzo del nav mobile -->
+        <nav class="nav mobile">
+            <div class="mobile-hamburguesa">
+                <a href="#menu" class="nav-target">☰</a>
+                <div id="menu" class="nav-links">
+                    <a href="#hola" class="nav-link">Hola</a></li>
+                    <a href="#conocimientos" class="nav-link">Conocimientos</a></li>
+                    <a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <a href="#contacto" class="nav-link" class="nav-contacto">contactame</a>
+                </div>
+            </div>
         </nav>
-        <!-- fin del nav -->
+        <!-- fin del nav mobile-->
+
+        <!-- comienzo del nav desktop -->
+        <nav class="nav desktop">
+            <div class="desktop-menu">
+                <ul class="nav-ul">
+
+                    <li><a href="#hola" tabindex="0">Hola</a></li>
+                    <li><a href="#conocimientos" tabindex="1">Conocimientos</a></li>
+                    <li><a href="#proyectos" tabindex="2">Proyectos</a></li>
+                    <li><a href="#contacto" class="nav-contacto" tabindex="3">Contactame</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- fin del nav desktop -->
     </header>
     <!-- fin del header -->
 
@@ -244,7 +258,7 @@
                         <h3 class="item_nombre">Buscador de películas</h3>
                     </a>
 
-                    <!-- <a href="#" class="proyecto--item" tabindex="12">
+                    <!-- <a href="#" class="proyecto--item" tabindex="">
                         <span class="item_hover"></span>
                         <span></span>
                         <span></span>
@@ -277,21 +291,21 @@
                         </p>
                         <!-- comienzo enlaces a redes sociales -->
                         <div class="contactame--redes">
-                            <a href="https://instagram.com" class="redes redes_instagram" tabindex="13">
+                            <a href="https://instagram.com" class="redes redes_instagram" tabindex="12">
                                 <span class="redes_icono"></span>
                                 <span>@PaulaGonzalez</span>
                             </a>
-                            <a href="https://github.com" class="redes redes_github" tabindex="14">
+                            <a href="https://github.com" class="redes redes_github" tabindex="13">
                                 <span class="redes_icono"></span>
                                 <span>paulanabelgonzalez</span>
 
                             </a>
-                            <a href="https://linkedin.com" class="redes redes_linkedin" tabindex="15">
+                            <a href="https://linkedin.com" class="redes redes_linkedin" tabindex="14">
                                 <span class="redes_icono"></span>
                                 <span>paulagonzalez</span>
 
                             </a>
-                            <a href="mailto:gaby_pau@live.com.ar" class="redes redes_mail" tabindex="16">
+                            <a href="mailto:gaby_pau@live.com.ar" class="redes redes_mail" tabindex="15">
                                 <span class="redes_icono"></span>
                                 <span>gaby_pau@live.com.ar</span>
 
@@ -302,9 +316,22 @@
 
                 </div>
 
+                <!-- ventana modal para confirmar formulario enviado -->
+                <div id="modal" class="modalmask">
+
+                    <div class="ventana-modal rotate">
+                        <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+                        <h2 class="modal--titulo">Gracias por contactarme!!!</h2>
+                        <p>Tu formulario a sido enviado con éxito.</p>
+
+                    </div>
+
+                </div>
+                <!-- fin ventana modal -->
+
                 <!-- comienzo formulario -->
-                <form action="https://formsubmit.com/paula.anabel.gonzalez85@gmail.com" method="post"
-                    class="formulario-contacto-escribime">
+                <form action="https://formsubmit.co/baeb6457a860a3481fe24271d9c4135c" method="POST"
+                    class="formulario-contacto-escribime" id="form">
                     <h2 class="escribime--titulo">Escribime</h2>
                     <div class="escribime--datos">
 
@@ -312,7 +339,7 @@
                             <label for="nombre">Nombre<span><img src="img/formulario/Asterisco.svg"
                                         alt="imagen de asterisco"></span></label>
                             <input type="text" placeholder="Ingresá tu nombre" name="nombre" class="formulario"
-                                id="nombre" required tabindex="17" />
+                                id="nombre" required tabindex="16" />
                             <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
                             <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
                         </div>
@@ -321,18 +348,18 @@
                             <label for="apellido">Apellido <span><img src="img/formulario/Asterisco.svg"
                                         alt="imagen de asterisco"></span></label>
                             <input type="text" placeholder="Ingresá tu apellido" name="apellido" class="formulario"
-                                id="apellido" required tabindex="18" />
+                                id="apellido" required tabindex="17" />
                             <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
                             <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
                         </div>
 
                     </div>
 
-                    <div class="escribime--mail">
+                    <div class="escribime--email">
                         <label for="email">Email <span><img src="img/formulario/Asterisco.svg"
                                     alt="imagen de asterisco"></span></label>
                         <input type="email" placeholder="Ingresá tu e-mail" name="email" class="formulario" id="email"
-                            required tabindex="19" />
+                            required tabindex="18" />
                         <i class="far fa-times-circle icon-invalid" aria-hidden="true"></i>
                         <i class="far fa-check-circle icon-valid" aria-hidden="true"></i>
                     </div>
@@ -341,14 +368,16 @@
                         <label for="mensaje">Mensaje <span><img src="img/formulario/Asterisco.svg"
                                     alt="imagen de asterisco"></span></label>
                         <textarea placeholder="Escribí tu mensaje aquí" name="mensaje" class="formulario" id="mensaje"
-                            required tabindex="20"></textarea>
+                            required tabindex="19"></textarea>
                         <i class="far fa-times-circle icon-invalid textarea-invalid" aria-hidden="true"></i>
                         <i class="far fa-check-circle icon-valid textarea-valid" aria-hidden="true"></i>
                     </div>
-                    <div class="escribime--btn" tabindex="21">
-                        <input type="submit" value="Enviar">
+                    <div class="escribime--btn" tabindex="20">
+                        <!-- <a href="#modal"></a> -->
+                        <input type="submit" value="Enviar" class="btn-submit">
                     </div>
-
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/#modal">
+                    <input type="hidden" name="_captcha" value="false">
                 </form>
                 <!-- fin formulario -->
             </div>
@@ -361,33 +390,42 @@
     <!-- comienzo del footer -->
     <footer>
         <!-- comienzo lista de nav -->
-        <div class="footer-nav">
+        <div class="footer-nav desktop">
             <ul>
-                <li><a href="#hola" tabindex="22">Hola</a></li>
-                <li><a href="#conocimientos" tabindex="23">Conocimientos</a></li>
-                <li><a href="#proyectos" tabindex="24">Proyectos</a></li>
-                <li><a href="#contacto" tabindex="25">Contactame</a></li>
+
+                <li><a href="#hola" tabindex="21">Hola</a></li>
+                <li><a href="#conocimientos" tabindex="22">Conocimientos</a></li>
+                <li><a href="#proyectos" tabindex="23">Proyectos</a></li>
+                <li><a href="#contacto" tabindex="24">Contactame</a></li>
+
             </ul>
         </div>
         <!-- fin lista de nav -->
+
         <div class="footer-redes">
             <a href="https://instagram.com" class="footer-redes--sociales redes--instagram">
-                <span class="footer-redes--icono" tabindex="26"></span>
+                <span class="footer-redes--icono" tabindex="25"></span>
             </a>
             <a href="https://github.com" class="footer-redes--sociales redes--github">
-                <span class="footer-redes--icono" tabindex="27"></span>
+                <span class="footer-redes--icono" tabindex="26"></span>
             </a>
             <a href="https://www.linkedin.com" class="footer-redes--sociales redes--linkedin">
-                <span class="footer-redes--icono" tabindex="28"></span>
+                <span class="footer-redes--icono" tabindex="27"></span>
             </a>
             <a href="mailto:gaby_pau@live.com.ar" class="footer-redes--sociales redes--mail">
-                <span class="footer-redes--icono" tabindex="29"></span>
+                <span class="footer-redes--icono" tabindex="28"></span>
             </a>
         </div>
         <!-- fin enlaces redes sociales -->
-        <p class="footer-texto">
+
+        <p class="footer-texto mobile">
             Hecho con ❤️ por <span class="footer--span">Paula Gonzalez</span>
         </p>
+
+        <div class="footer-desktop desktop">
+            <p class="footer-texto ">Hecho con<span><img src="img/favicon.png" alt="manito hacioendo un corazón"
+                        class="footer-img"></span> por <span class="footer--span">Paula Gonzalez</span></p>
+        </div>
     </footer>
     <!-- fin del footer -->
 </body>

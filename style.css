@@ -21,7 +21,8 @@ body {
 /* comienzo estilos header */
 
 header {
-    display: none;
+    width: calc(100% + 24px);
+    margin-left: -12px;
     font-family: "Agbalumo";
     position: sticky;
     top: 0;
@@ -31,28 +32,80 @@ header {
 
 @media (min-width: 970px) {
     header {
-        display: block;
+        width: 100%;
+        margin-left: 0;
     }
 }
 
-nav {
-    height: 90px;
-    font-size: 1.5rem;
-    margin: auto;
+@media (max-width: 970px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
 }
 
 @media (min-width: 970px) {
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        max-width: 1200px;
+    .mobile {
+        display: none;
     }
+
+    .desktop {
+        display: block;
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+.nav {
+    height: 80px;
+    padding: 11px 40px;
+    font-size: 1.5rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-end; */
+}
+
+.nav-target {
+    padding-block: 10px;
+}
+
+.mobile-hamburguesa,
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0px;
+    right: 0;
+    background: url(img/fondos/fondo\ flores.jpeg);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    clip-path: circle(0% at top right);
+    transition: all .9s;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: antiquewhite;
+    text-shadow: 0px 0px 7px #a10b25;
+}
+
+.nav-links:target {
+    clip-path: circle(150% at top right);
 }
 
 /* animación en el header */
 
-nav ul {
+.nav-ul {
     display: flex;
     list-style: none;
     gap: 25px;
@@ -109,9 +162,6 @@ a {
 /* comienzo estilos main */
 
 /* estilos sección hola*/
-section {
-    scroll-margin-top: 90px;
-}
 
 .hola,
 .conocimientos,
@@ -119,13 +169,24 @@ section {
 .proyectos,
 .contacto,
 footer {
-    padding-block: 80px;
+    scroll-margin-top: 80px;
+    padding-bottom: 97px;
     font-family: "Amita";
     text-align: center;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+}
 
+.hola {
+    padding-top: 9px;
+}
+
+@media (min-width: 970px) {
+    .hola {
+        padding-top: 107px;
+    }
+}
+
+.caja-hola {
+    scroll-padding-top: 97px;
 }
 
 @media (min-width: 970px) {
@@ -189,7 +250,6 @@ h1:before {
     }
 }
 
-
 .hola--descripcion,
 .conocimientos--descripcion,
 .contactame--descripcion {
@@ -197,7 +257,6 @@ h1:before {
 }
 
 .hola--btn {
-
     font-size: 1.5rem;
     font-weight: 600;
     border-radius: 40px;
@@ -233,8 +292,6 @@ h2 {
     font-family: "Merienda";
     font-size: 2.4rem;
     padding-block: 34px;
-    /* color: pink;
-        text-shadow: 0px 0px 7px black;*/
 }
 
 .conocimientos--descripcion {
@@ -536,6 +593,7 @@ h2 {
     .contacto {
         width: 100%;
         margin-left: 0;
+        padding-block: 145px;
     }
 }
 
@@ -707,7 +765,7 @@ h2 {
 
 .datos_nombre,
 .datos_apellido,
-.escribime--mail,
+.escribime--email,
 .escribime--mensaje {
     position: relative;
 }
@@ -771,7 +829,6 @@ textarea:valid {
     position: absolute;
     bottom: 31px;
     right: 20px;
-    /* transform: translateY(50%); */
 }
 
 .textarea-invalid,
@@ -801,35 +858,98 @@ textarea:not(:placeholder-shown):invalid~.icon-invalid {
     border: 1px solid white;
     background-color: #88c2a8;
     color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: pointer;
 }
 
 /* fin estilos sección contacto*/
+
+/* ventana modal */
+
+/*Efecto*/
+.modalmask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalmask:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.ventana-modal {
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    transition: all 500ms ease-in;
+}
+
+.modal--titulo {
+    padding-top: 1px;
+}
+
+/*Movimientos*/
+
+.rotate {
+    /* -webkit-transform: scale(-5, -5); */
+    transform: scale(-5, -5);
+}
+
+.modalmask:target .rotate {
+    transform: rotate(360deg) scale(1, 1);
+    -webkit-transform: rotate(360deg) scale(1, 1);
+}
+
+/*Boton de cerrar*/
+
+.cerrar {
+    display: block;
+    text-align: end;
+    font-size: 1.7rem;
+    background-color: #ad747e;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.cerrar:hover {
+    background: #d4a1c3;
+    color: #ad747e;
+}
+
+/* fin ventanamodal */
 
 /* comienzo estilos footer */
 
 footer {
     width: calc(100% + 24px);
     margin-left: -12px;
-    height: 250px;
+    height: 269px;
     background: url(img/fondos/fondo-footer.gif);
     padding: 55px 20px 30px;
-    flex-direction: column;
 }
 
 @media (min-width: 970px) {
     footer {
         width: 100%;
         margin-left: 0px;
-    }
-}
-
-.footer-nav {
-    display: none;
-}
-
-@media (min-width: 970px) {
-    .footer-nav {
-        display: block;
     }
 }
 
@@ -846,7 +966,7 @@ footer {
     align-items: flex-end;
     justify-content: center;
     gap: 35px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .footer-redes--sociales .footer-redes--icono {
@@ -917,6 +1037,14 @@ footer {
     margin-left: 3px;
 }
 
-/* fin estilos footer */
+.desktop .footer-texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* poner el tabindex, favicon */
+.footer-img {
+    width: 50px;
+}
+
+/* fin estilos footer */
