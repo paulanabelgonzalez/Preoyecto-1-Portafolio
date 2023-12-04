@@ -7,6 +7,10 @@
 
 Cuenta con varias secciones, todas con animaciones.
 
+![menu hamburguesa gif](img-readme/menu-hamburguesa.gif)
+
+Cuenta con un menu hamburguesa animado exclusivamente con html y css.
+
 ## secciones:
 
 **Mis Conocimientos:**
