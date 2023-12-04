@@ -15,14 +15,14 @@ Cuenta con un menu hamburguesa animado exclusivamente con html y css.
 
 **Mis Conocimientos:**
 
-![imagen de mi portfolio](img-readme/conocimientos.png)
+![imagen mis conocimientos gif](img-readme/conocimientos.gif)
 
 En esta sección se ve el hover, al pasar por las cards de los conocimientos que iremos adquiriendo a lo largo del curso.
 
 
 **Mis Proyectos:**
 
-![imagen de mi portfolio](img-readme/proyectos.png)
+![imagen de mis proyectos gif ](img-readme/proyectos.gif)
 
 Acá se muestra la animación en las cards acompañada de un filter blur y de una sombra en degrade.
 

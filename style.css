@@ -964,6 +964,11 @@ footer {
     padding-bottom: 25px;
 }
 
+.footer-nav a:hover {
+    color: beige;
+    text-shadow: 0px 0px 5px #fff;
+}
+
 .footer-redes {
     display: flex;
     align-items: flex-end;
