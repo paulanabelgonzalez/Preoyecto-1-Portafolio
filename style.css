@@ -19,7 +19,6 @@ body {
 }
 
 /* comienzo estilos header */
-
 header {
     width: calc(100% + 24px);
     margin-left: -12px;
@@ -63,9 +62,6 @@ header {
     height: 80px;
     padding: 11px 40px;
     font-size: 1.5rem;
-    /* display: flex;
-    align-items: center;
-    justify-content: flex-end; */
 }
 
 .nav-target {
@@ -83,7 +79,7 @@ header {
     position: fixed;
     left: 0;
     bottom: 0;
-    top: 0px;
+    top: 0;
     right: 0;
     background: url(img/fondos/fondo\ flores.jpeg);
     background-size: cover;
@@ -107,7 +103,6 @@ header {
 }
 
 /* animación en el header */
-
 .nav-ul {
     display: flex;
     list-style: none;
@@ -163,9 +158,7 @@ a {
 /* fin estilos header */
 
 /* comienzo estilos main */
-
 /* estilos sección hola*/
-
 .hola,
 .conocimientos,
 .frase,
@@ -186,10 +179,6 @@ footer {
     .hola {
         padding-top: 107px;
     }
-}
-
-.caja-hola {
-    scroll-padding-top: 97px;
 }
 
 @media (min-width: 970px) {
@@ -222,7 +211,6 @@ p {
 }
 
 /* color gradiente para h1 */
-
 h1 {
     font-size: 2.7rem;
     padding-bottom: 13px;
@@ -290,7 +278,6 @@ h1:before {
 /* fin estilos sección hola */
 
 /* estilos sección conocimientos*/
-
 h2 {
     font-family: "Merienda";
     font-size: 2.4rem;
@@ -334,7 +321,6 @@ h2 {
 }
 
 /* animación de la caja conocimientos */
-
 .conocimiento--item span {
     position: absolute;
     transition: .5s;
@@ -408,7 +394,6 @@ h2 {
 /* fin estilos sección conocimientos */
 
 /* estilos sección frase*/
-
 .frase {
     width: calc(100% + 24px);
     margin-left: -12px;
@@ -456,7 +441,6 @@ h2 {
 /* fin estilos sección frase */
 
 /* estilos sección proyectos */
-
 .caja-proyectos-informacion {
     width: 100%;
     max-width: 1100px;
@@ -493,7 +477,6 @@ h2 {
 }
 
 /* sombra degrade */
-
 .item_hover {
     width: 100%;
     height: 290px;
@@ -583,7 +566,6 @@ h2 {
 /* fin estilos sección proyectos*/
 
 /* estilos sección contacto */
-
 .contacto {
     width: calc(100% + 24px);
     margin-left: -12px;
@@ -718,26 +700,6 @@ h2 {
     background-color: pink;
 }
 
-/* .redes_github .redes_icono {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background: url(img/redes/redes/in.svg)center center no-repeat;
-    background-size: 25px;
-}
-
-.redes_github:hover .redes_icono {
-    background: url(img/redes/github-hover.svg)center center no-repeat;
-    background-size: 25px;
-    border: 1px solid;
-    padding: 21px;
-    border-radius: 50%;
-}
-
-.redes_github:hover {
-    color: brown;
-} */
-
 .contactame--redes span img {
     width: 25px;
     height: 25px;
@@ -869,7 +831,6 @@ textarea:not(:placeholder-shown):invalid~.icon-invalid {
 /* fin estilos sección contacto*/
 
 /* ventana modal */
-
 /*Efecto*/
 .modalmask {
     position: fixed;
@@ -910,7 +871,6 @@ textarea:not(:placeholder-shown):invalid~.icon-invalid {
 }
 
 /*Movimientos*/
-
 .rotate {
     /* -webkit-transform: scale(-5, -5); */
     transform: scale(-5, -5);
@@ -922,7 +882,6 @@ textarea:not(:placeholder-shown):invalid~.icon-invalid {
 }
 
 /*Boton de cerrar*/
-
 .cerrar {
     display: block;
     text-align: end;
@@ -940,7 +899,6 @@ textarea:not(:placeholder-shown):invalid~.icon-invalid {
 /* fin ventanamodal */
 
 /* comienzo estilos footer */
-
 footer {
     width: calc(100% + 24px);
     margin-left: -12px;
